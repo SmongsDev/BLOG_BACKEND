@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CorsFilter implements Filter {
-    private final String FRONT_URL = "https://javascriptkr-curly-space-rotary-phone-j76j6qjgwq72jj66-3000.app.github.dev";
+    private final String FRONT_URL = "https://localhost:3000";
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

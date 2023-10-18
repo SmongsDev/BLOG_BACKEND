@@ -26,7 +26,7 @@ import lombok.RequiredArgsConstructor;
 @Component
 public class SecurityConfig {
 
-    private final String FRONT_URL = "https://javascriptkr-curly-space-rotary-phone-j76j6qjgwq72jj66-3000.app.github.dev";
+    private final String FRONT_URL = "localhost:3000";
     
     private final JwtUtil jwtUtil;
 
