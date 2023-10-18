@@ -1,0 +1,32 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/blog?characterEncoding=UTF-8
+        username: root
+        password: smongs1102
+    jpa:
+        open-in-view: true
+        hibernate:
+            ddl-auto: update
+            # naming:
+            #     physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+            # use-new-id-generator-mapping: false
+        properties:
+            hibernate.format_sql: true
+        dialect:
+            org.hibernate.dialect.MySQLDialect
+        # show-sql: true
+    # profiles:
+    #     include: security
+    main:
+        allow-bean-definition-overriding: true
+
+logging:
+  level:
+    com.tutorial: debug
+
+    
+jwt:
+  secret:
+    key: Y2JmOTc3NjBhY2U4ODMzMDIyM2VmN2M3ZGVkNTU1MzM2MTNlNWY0NDA5OTYxMmVmOGY3ODc0MmU0N2RhMzk5YjhhMzE2ZTE5YWM3YWM0MDI5Mjc0MzUxN2ZhMTBkNzRjMmNjNTllMzkyMmMyMTZiYWZjNTYyOWMxOTllZDU0Zjc=
+#   token-validity-in-seconds: 86400
