@@ -26,7 +26,7 @@ import lombok.RequiredArgsConstructor;
 @Component
 public class SecurityConfig {
 
-    private final String FRONT_URL = "localhost:3000";
+    private final String FRONT_URL = "http://ec2-15-165-14-252.ap-northeast-2.compute.amazonaws.com";
     
     private final JwtUtil jwtUtil;
 
@@ -48,7 +48,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests()
-            .requestMatchers("/api/**", "/member/**", "/auth/**").permitAll()
+            .requestMatchers("/api/**", "/member/**", "/auth/login").permitAll()
             .anyRequest().authenticated()
 
             .and()

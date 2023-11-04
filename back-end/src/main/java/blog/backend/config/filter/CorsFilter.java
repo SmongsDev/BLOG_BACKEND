@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CorsFilter implements Filter {
-    private final String FRONT_URL = "https://localhost:3000";
+    private final String FRONT_URL = "http://ec2-15-165-14-252.ap-northeast-2.compute.amazonaws.com";
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
